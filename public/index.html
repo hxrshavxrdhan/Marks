@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Counsellor Desk · Marks notifications</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+<header><div class="brand"><span class="logo">C</span> Counsellor Desk</div><span class="pill">LOCAL PROTOTYPE</span></header>
+<main>
+<div class="eyebrow">ACADEMICS / PARENT COMMUNICATION</div>
+<section class="heading"><div><h1>A little clarity.<br>A stronger connection.</h1><p>Review student marks and keep parents informed, in a few clicks.</p></div><div class="term">COUNSELLOR WORKSPACE<br><strong>Marks notifications</strong><span>Powered by your Excel records</span></div></section>
+<div class="notice"><span class="dot"></span><div><strong>Safe demo mode is on</strong><br>Send actions are simulated. WhatsApp links open a draft; you choose whether to send it from your signed-in account.</div></div>
+<section class="stats" aria-label="Workbook summary"><div><span>Student records</span><strong id="count">—</strong><small>From your workbook</small></div><div><span>Subjects</span><strong>4</strong><small>Maths · UHV · DBMS · COA</small></div><div><span>Needs review</span><strong id="reviews">—</strong><small>Source values kept unchanged</small></div><div><span>Simulated this session</span><strong id="sent">0</strong><small>No actual messages sent</small></div></section>
+<section class="settings"><div><h2>Message details</h2><p>These details appear in every parent message.</p></div><label>Assessment<input id="assessment" maxlength="100" value="Internal Assessment 1"></label><label>Sender name<input id="counsellor" maxlength="100" value="Class Counsellor"></label><label class="country">Country code<input id="country" maxlength="3" value="91" inputmode="numeric"><small>91 assumed for 10-digit numbers</small></label></section>
+<section class="records"><div class="toolbar"><div><h2>Student marks</h2><p id="source">Loading workbook…</p></div><div class="actions"><input id="search" type="search" placeholder="Search student…" aria-label="Search students"><button id="all" disabled>Send All · Mock</button></div></div>
+<div id="error" role="alert"></div><div class="table-wrap"><table><thead><tr><th>Student / parent number</th><th>Maths</th><th>UHV</th><th>DBMS</th><th>COA</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="rows"></tbody></table></div><p class="table-note">Marks are shown exactly as recorded. Maximum marks are not specified in the workbook. Send All includes every workbook record, even when search is active.</p></section>
+<footer><span>Counsellor Desk</span><span>Thoughtful communication, one student at a time.</span></footer>
+</main>
+<dialog id="dialog"><div class="modal-heading"><div><span class="eyebrow">PARENT NOTIFICATION</span><h2 id="dialog-title">Review message</h2></div><button id="close" class="secondary" aria-label="Close dialog">Close</button></div><p>Review the recipients and marks before proceeding. No automatic WhatsApp messages will be sent.</p><div id="previews"></div><div id="result" role="status" aria-live="polite"></div><div class="modal-footer"><button id="simulate">Simulate send</button></div></dialog>
+</body></html>
